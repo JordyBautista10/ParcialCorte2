@@ -34,22 +34,12 @@ public class DemoApplication {
 
 			System.out.println("Adding employees....\n");
 			employeeService.addEmployee(new Employee("Jordy", "Bautista", "Estudiante", 00001.00, LocalDate.of(2002, 12, 10)));
-			employeeService.addEmployee(new Employee("Jorge", "Eseche", "Profesor", 43000.00, LocalDate.of(1995, 07, 06)));
+			employeeService.addEmployee(new Employee("Jorge", "Useche", "Profesor", 43000.00, LocalDate.of(1992, 01, 06)));
 
 			System.out.println("\nGetting all employees....");
 			employeeService.getAllEmployees().forEach(employee -> System.out.println(employee.getAge()));
 
-			System.out.println("\nGetting employee with id = 1....");
-			System.out.println(employeeService.getEmployee(1L));
 
-			System.out.println("\nUpdating employee with id = 1....");
-			System.out.println("Before----->" + employeeService.getEmployee(1L));
-			Employee employee = employeeService.getEmployee(1L);
-			employee.setFirstName("Marge");
-			System.out.println("After------>" + employeeService.updateEmployee(employee));
-
-			System.out.println("\nDeleting employee....");
-			employeeService.deleteEmployee(1L);
 		};
 	}
 
